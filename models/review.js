@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var autopopulate = require('mongoose-autopopulate');
 
 var reviewSchema = new mongoose.Schema({
+  title: String,
   content: String,
   created_at: { type: Date },
   rating: Number
@@ -16,5 +17,5 @@ reviewSchema.pre('save', function(next){
   next();
 });
 
-var Review = mongoose.model('Review', postSchema);
+var Review = mongoose.model('Review', reviewSchema);
 module.exports = Review;
