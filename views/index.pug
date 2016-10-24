@@ -1,6 +1,8 @@
 extends layout
 
 block content
+  script(src="/javascripts/postData.js")
+  .reviews
 
   .postReview
     form(role='form', action="/reviews", method="post", style='max-width: 300px;')
