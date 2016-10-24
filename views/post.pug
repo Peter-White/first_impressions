@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  form(role='form', action="/reviews", method="post", style='max-width: 300px;')
+        .form-group
+          lable Title:
+          br
+          input.form-control(type='text', name="title", placeholder='Title')
+        .form-group
+          br
+          lable Review:
+          br
+          textarea(type='text', name='content', rows='4', cols='50', placeholder="Enter review here")
+        .form-group
+          lable Rating:
+          br
+          input.form-control(type='number', name="rating", placeholder='1')
+        br
+        button.btn.btn-defualt(type='submit') Submit
