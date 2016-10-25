@@ -2,6 +2,7 @@ extends layout
 
 block content
   script(src="/javascripts/postData.js")
+  script(src="./javascripts/app.js")
   .reviews
 
   .postReview
@@ -15,9 +16,11 @@ block content
             lable Review:
             br
             textarea(type='text', name='content', rows='4', cols='50', placeholder="Enter review here")
+            p.textlength shoe
           .form-group
             lable Rating:
             br
-            input.form-control(type='number', name="rating", placeholder='1')
+            input.form-control(type='number', name="rating", value='0' min="0" max="10")
+            p / 10
           br
           button.btn.btn-defualt(type='submit') Submit
