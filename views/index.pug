@@ -21,7 +21,13 @@ block content
           .form-group
             lable Rating:
             br
-            input.form-control(type='number', name="rating", value='0' min="0" max="10")
-            p / 10
+            input(type="radio", name="rating", value="Thumbs Up")
+            | Thumbs Up
+            br
+            input(type="radio", name="rating", value="Thumbs Side")
+            | Thumbs Side
+            br
+            input(type="radio", name="rating", value="Thumbs Down")
+            | Thumbs Down
           br
           button.btn.btn-defualt(type='submit') Submit

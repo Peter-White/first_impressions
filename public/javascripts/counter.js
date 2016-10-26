@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var $textarea = $('.postReview form textarea');
+  // var $input = $('.postReview form input');
   var textLength;
 
   $textarea.on('keyup', function() {
