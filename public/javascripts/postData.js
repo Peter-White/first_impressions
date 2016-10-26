@@ -8,7 +8,7 @@ $(document).ready(function() {
     $.each(data, function(i, review) {
       reviewHTML += '<li><h2>' + review.title + '</h2></li>';
       reviewHTML += '<li><p>' + review.content + '</p></li>';
-      reviewHTML += '<li><img src="' + review.rating + '" /></li>';
+      reviewHTML += '<li><img src="' + review.rating + '" height="70"/></li>';
     });
     reviewHTML += '</ul>';
     $('.reviews').html(reviewHTML);
