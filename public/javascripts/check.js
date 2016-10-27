@@ -1,5 +1,17 @@
 $(document).ready(function() {
   var $charCount = $('#charCount');
+  var $toggle = $('.toggle');
+  var $postReview = $('.postReview');
+
+  $postReview.hide();
+
+  $toggle.click(function() {
+    if ( $postReview.is( ":hidden" ) ) {
+      $postReview.slideDown( "slow" );
+    } else {
+      $postReview.slideUp( "slow" );
+    }
+  });
 
   $('.postReview form').submit(function(event) {
     var check = $charCount.hasClass( 'overLimit' );
