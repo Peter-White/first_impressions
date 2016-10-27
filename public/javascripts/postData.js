@@ -4,13 +4,15 @@ $(document).ready(function() {
     format: "json"
   };
   function displayReviews(data) {
-    var reviewHTML = '<ul type="none">';
+    var reviewHTML = '<div>';
     $.each(data, function(i, review) {
+      reviewHTML += '<ul type="none" id="' + review._id + '">';
       reviewHTML += '<li><h2>' + review.title + '</h2></li>';
       reviewHTML += '<li><p>' + review.content + '</p></li>';
       reviewHTML += '<li><img src="' + review.rating + '" height="70"/></li>';
+      reviewHTML += '</ul>';
     });
-    reviewHTML += '</ul>';
+    reviewHTML += '</div>';
     $('.reviews').html(reviewHTML);
   };
   $.getJSON(reviewAPI, reviewOptions, displayReviews);
