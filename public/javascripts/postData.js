@@ -4,12 +4,13 @@ $(document).ready(function() {
     format: "json"
   };
   function displayReviews(data) {
-    var reviewHTML = '<div>';
+    var reviewHTML = '<div class="reviewContainer">';
     $.each(data, function(i, review) {
       reviewHTML += '<ul type="none" id="' + review._id + '">';
       reviewHTML += '<li><h2>' + review.title + '</h2></li>';
       reviewHTML += '<li><p>' + review.content + '</p></li>';
       reviewHTML += '<li><img src="' + review.rating + '" height="70"/></li>';
+      reviewHTML += '<li><p>Posted On: ' + review.created_at + '</p></li>'
       reviewHTML += '</ul>';
     });
     reviewHTML += '</div>';

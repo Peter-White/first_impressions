@@ -1,0 +1,8 @@
+@media (min-width: 320px) and (max-width: 568px) {
+  .reviews div {
+    width: 100%;
+  }
+  .postReview .form-control, textarea {
+    width: 80%;
+  }
+}

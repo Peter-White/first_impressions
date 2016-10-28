@@ -2,6 +2,8 @@ $(document).ready(function() {
   var $charCount = $('#charCount');
   var $toggle = $('.toggle');
   var $postReview = $('.postReview');
+  var $input = $('.postReview input');
+  var $box = $('.postReview textarea');
 
   $postReview.hide();
 
@@ -15,11 +17,11 @@ $(document).ready(function() {
 
   $('.postReview form').submit(function(event) {
     var check = $charCount.hasClass( 'overLimit' );
-    var input = $('.postReview input').val().length;
-    var box = $('.postReview textarea').val().length;
 
-    if(check === false && input > 0 && box > 0) {
+    if(check === false && $input.val().length > 0 && $box.val().length > 0) {
       console.log("Yep");
+      $input.val('');
+      $box.val('');
     } else {
       event.preventDefault();
       console.log("Nope")

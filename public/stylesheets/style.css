@@ -11,3 +11,23 @@ a {
   color: red;
 }
 
+.toggle {
+  cursor: pointer;
+}
+
+.reviews div {
+  width: 50%;
+  margin: 0 auto;
+}
+.form-control, textarea {
+  width: 100%;
+}
+.form-control {
+  font-size: 16px;
+}
+textarea {
+  font-size: 14px;
+}
+#charCount {
+  float: left;
+}

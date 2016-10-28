@@ -3,22 +3,24 @@ extends layout
 block content
   script(src="/javascripts/postData.js")
   script(src="./javascripts/counter.js")
-  script(src="./javascripts/check.js")
+  script(src="./javascripts/submit.js")
 
-  h3.toggle Click to add review
+  .toggle
+    h3 Click to add review
 
   .postReview
     form(role='form', action="/reviews", method="post", style='max-width: 300px;')
           .form-group
-            lable Title:
+            lable * Title:
             br
             input.form-control(type='text', name="title", placeholder='Title')
           .form-group
             br
-            lable Review:
+            lable * Review:
             br
             textarea(type='text', name='content', rows='4', cols='50', placeholder="Enter review here")
             p#charCount 0
+            p#outof &nbsp; / 300
           .form-group
             lable Rating:
             br
