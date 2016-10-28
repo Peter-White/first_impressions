@@ -7,6 +7,26 @@ a {
   color: #00B7FF;
 }
 
+header {
+  background-color: pink;
+  top:0px;
+  width: 100%;
+}
+
+header h1 {
+  font-family: 'Kaushan Script', cursive;
+  color: rgb(255, 0, 102);
+}
+
+.logo img {
+  height: 60px;
+  float: left;
+}
+
+.title {
+  line-height: 20px;
+}
+
 .overLimit {
   color: red;
 }
