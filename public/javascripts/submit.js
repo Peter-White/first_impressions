@@ -20,8 +20,6 @@ $(document).ready(function() {
 
     if(check === false && $input.val().length > 0 && $box.val().length > 0) {
       console.log("Yep");
-      $input.val('');
-      $box.val('');
     } else {
       event.preventDefault();
       console.log("Nope")
