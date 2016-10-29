@@ -14,7 +14,7 @@ $(document).ready(function() {
       reviewHTML += '</ul>';
     });
     reviewHTML += '</div>';
-    $('body').append(reviewHTML);
+    $('.container').append(reviewHTML);
   };
   $.getJSON(reviewAPI, reviewOptions, displayReviews);
 });

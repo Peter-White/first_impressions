@@ -1,9 +1,6 @@
 a {
   color: #00B7FF;
 }
-header {
-  background-color: rgb(255, 179, 217);
-}
 .logo h1 {
   font-family: 'Kaushan Script', cursive;
   color: rgb(255, 0, 102);
@@ -11,12 +8,17 @@ header {
 .container {
   width: 100%;
 }
+.reviews {
+  height: 500px;
+  overflow: scroll;
+}
 .logo img {
   height: 60px;
   float: left;
 }
 .logo {
   padding: 1%;
+  background-color: rgb(255, 179, 217);
 }
 .title {
   line-height: 20px;
@@ -26,6 +28,7 @@ header {
 }
 .toggle {
   cursor: pointer;
+  height: 50px;
 }
 .form-control, textarea {
   width: 100%;
@@ -33,15 +36,16 @@ header {
 .form-control {
   font-size: 16px;
 }
-textarea {
+.postReview {
+  padding: 1%;
+}
+.postReview textarea {
   font-size: 14px;
 }
+#charCount {
+  float: left;
+}
 @media (min-width: 568px) {
-  .reviews {
-    width: 80%;
-    height: 100px;
-    overflow: true;
-  }
   .postReview .form-control, textarea {
     width: 100%;
   }

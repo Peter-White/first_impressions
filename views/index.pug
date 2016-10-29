@@ -8,9 +8,7 @@ block content
   br
   br
   br
-  .toggle
-    h3 Click to add review
-
+  img.toggle(src="./images/edit-new-icon-22.png")
   .postReview
     form(role='form', action="/reviews", method="post", style='max-width: 300px;')
           .form-group
@@ -22,6 +20,7 @@ block content
             lable * Review:
             br
             textarea(type='text', name='content', rows='4', cols='50', placeholder="Enter review here")
+            br
             p#charCount 0
             p#outof &nbsp; / 300
           .form-group
@@ -36,4 +35,6 @@ block content
             img(src="./images/thumbsdown.png", height="50")
           br
           button.btn.btn-defualt(type='submit') Submit
+          #status
   br
+  .reviewContainer
