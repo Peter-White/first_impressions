@@ -16,10 +16,13 @@ $(document).ready(function() {
     var check = $charCount.hasClass( 'overLimit' );
 
     if(check === false && $input.val().length > 0 && $box.val().length > 0) {
-      console.log("Yep");
+      $status.removeClass('error');
+      $status.addClass('success');
       $status.html("Success!");
     } else {
       event.preventDefault();
+      $status.removeClass('success');
+      $status.addClass('error');
       var errorHTML = "<ul>";
       if (check !== false) {
         errorHTML +=  "<li>Maximum Character Length Exceded</li>";
