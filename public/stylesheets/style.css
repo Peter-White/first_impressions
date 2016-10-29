@@ -1,43 +1,28 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
 a {
   color: #00B7FF;
 }
-
 header {
   background-color: pink;
-  top:0px;
-  width: 100%;
 }
-
 header h1 {
   font-family: 'Kaushan Script', cursive;
   color: rgb(255, 0, 102);
 }
-
+.container {
+  width: 100%;
+}
 .logo img {
   height: 60px;
   float: left;
 }
-
 .title {
   line-height: 20px;
 }
-
 .overLimit {
   color: red;
 }
-
 .toggle {
   cursor: pointer;
-}
-
-.reviews div {
-  width: 50%;
-  margin: 0 auto;
 }
 .form-control, textarea {
   width: 100%;
@@ -48,6 +33,18 @@ header h1 {
 textarea {
   font-size: 14px;
 }
-#charCount {
-  float: left;
+@media (min-width: 568px) {
+  .reviews {
+    width: 80%;
+    height: 100px;
+    overflow: true;
+  }
+  .postReview .form-control, textarea {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+    height: 0;
+    padding: 1% 1% 10%;
+  }
 }

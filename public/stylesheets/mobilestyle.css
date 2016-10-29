@@ -1,8 +1,13 @@
-@media (min-width: 320px) and (max-width: 568px) {
-  .reviews div {
-    width: 100%;
+@media (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .reviews {
+    width: 90%;
   }
   .postReview .form-control, textarea {
     width: 80%;
+  }
+  header {
+    width: 100%;
+    height: 100%;
+    padding: 1% 10%;
   }
 }

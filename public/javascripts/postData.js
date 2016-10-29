@@ -4,7 +4,7 @@ $(document).ready(function() {
     format: "json"
   };
   function displayReviews(data) {
-    var reviewHTML = '<div class="reviewContainer">';
+    var reviewHTML = '<div class="reviews">';
     $.each(data, function(i, review) {
       reviewHTML += '<ul type="none" id="' + review._id + '">';
       reviewHTML += '<li><h2>' + review.title + '</h2></li>';
@@ -14,7 +14,7 @@ $(document).ready(function() {
       reviewHTML += '</ul>';
     });
     reviewHTML += '</div>';
-    $('.reviews').html(reviewHTML);
+    $('body').append(reviewHTML);
   };
   $.getJSON(reviewAPI, reviewOptions, displayReviews);
 });
