@@ -5,6 +5,7 @@ $(document).ready(function() {
   var $input = $('.postReview input');
   var $box = $('.postReview textarea');
   var $status = $('#status');
+  var $reviews = $('.reviews');
 
   $postReview.hide();
 
@@ -14,13 +15,19 @@ $(document).ready(function() {
 
   $('.postReview form').submit(function(event) {
     var check = $charCount.hasClass( 'overLimit' );
+    event.preventDefault();
 
     if(check === false && $input.val().length > 0 && $box.val().length > 0) {
       $status.removeClass('error');
       $status.addClass('success');
       $status.html("Success!");
+      $.ajax({
+        url: '/reviews',
+        type: 'POST',
+        dataType: 'json',
+        data: {title: $input.val(), content: $box.val(), rating: $input.last().val()},
+      });
     } else {
-      event.preventDefault();
       $status.removeClass('success');
       $status.addClass('error');
       var errorHTML = "<ul>";

@@ -1,15 +1,28 @@
 a {
   color: #00B7FF;
 }
+body {
+  background-color: rgb(255, 179, 217);
+}
+.container {
+  background-color: white;
+  margin: 0 auto;
+}
+.reviews {
+  padding-top: 2%;
+}
 .logo h1 {
   font-family: 'Kaushan Script', cursive;
   color: rgb(255, 0, 102);
 }
-.container {
-  width: 100%;
+.reviews ul img {
+  padding: 1%;
 }
-.reviews {
-
+#thumb {
+  float: left;
+}
+footer {
+  background-color: rgb(255, 179, 217);
 }
 /*Error Handler*/
 .success {
@@ -33,18 +46,19 @@ a {
 .overLimit {
   color: red;
 }
-.toggle {
-  cursor: pointer;
-  height: 50px;
-}
 .form-control, textarea {
   width: 100%;
 }
 .form-control {
   font-size: 16px;
 }
+.toggle {
+  cursor: pointer;
+  height: 50px;
+  padding: 0 4%;
+}
 .postReview {
-  padding: 1%;
+  padding: 1% 4%;
 }
 .postReview textarea {
   font-size: 14px;
@@ -56,7 +70,14 @@ a {
   .postReview .form-control, textarea {
     width: 100%;
   }
-  header {
+  .container {
+    width: 90%;
+  }
+  footer {
     width: 100%;
+    padding: 2%;
+  }
+  footer a {
+    font-size: 30px;
   }
 }
