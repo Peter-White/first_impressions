@@ -106,12 +106,11 @@ footer {
 .postReview {
   padding: 1% 4%;
 }
-.postReview textarea {
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
-}
 #charCount {
   float: left;
+}
+.postReview textarea {
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media (min-width: 568px) {
@@ -128,7 +127,7 @@ footer {
   footer a {
     font-size: 30px;
   }
-  .toggle {
-    padding: 0 4%;
+  .postReview textarea {
+    font-size: 14px;
   }
 }

@@ -10,5 +10,8 @@
   .toggle {
     padding: 4%;
   }
+  .postReview textarea {
+    font-size: 10px;
+  }
 }
 
