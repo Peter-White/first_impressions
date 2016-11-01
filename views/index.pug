@@ -10,7 +10,7 @@ block content
   br
   img.toggle(src="./images/edit-new-icon-22.png")
   .postReview
-    form(role='form', action="/reviews", method="post", style='max-width: 300px;')
+    form(role='form')
           .form-group
             lable * Title:
             br
@@ -27,11 +27,11 @@ block content
             lable Rating:
             br
             br
-            input(type="radio", name="rating", value="./images/thumbsup.png", checked="checked")
+            input#good(type="radio", name="rating", value="./images/thumbsup.png", checked="checked")
             img(src="./images/thumbsup.png", height="50")
-            input(type="radio", name="rating", value="./images/thumbsside.png")
+            input#average(type="radio", name="rating", value="./images/thumbsside.png")
             img(src="./images/thumbsside.png", height="50")
-            input(type="radio", name="rating", value="./images/thumbsdown.png")
+            input#bad(type="radio", name="rating", value="./images/thumbsdown.png")
             img(src="./images/thumbsdown.png", height="50")
           br
           button.btn.btn-defualt(type='submit') Submit

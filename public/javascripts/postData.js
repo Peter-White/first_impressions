@@ -6,8 +6,11 @@ $(document).ready(function() {
     } else if(photo === './images/thumbsdown.png') {
       return "bad"
     }
-    else {
+    else if(photo === './images/thumbsside.png') {
       return "average"
+    }
+    else {
+      return 'error'
     }
   };
 

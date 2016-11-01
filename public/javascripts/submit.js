@@ -7,6 +7,25 @@ $(document).ready(function() {
   var $status = $('#status');
   var $reviews = $('.reviews');
 
+  var thumbCheck = function() {
+    var $good = $("#good");
+    var $bad = $("#bad");
+    var $average = $("#average");
+
+    if ($good.is(':checked')) {
+      return $good.val();
+    }
+    else if ($bad.is(':checked')) {
+      return $bad.val();
+    }
+    else if ($average.is(':checked')) {
+      return $average.val();
+    }
+    else {
+      console.log(error);
+    }
+  };
+
   $postReview.hide();
 
   $toggle.click(function() {
@@ -21,7 +40,7 @@ $(document).ready(function() {
       $status.removeClass('error');
       $status.addClass('success');
       $status.html("Success!");
-      $.post('/reviews', {title: $input.val(), content: $box.val(), rating: $input.last().val()}, function(data) {
+      $.post('/reviews', {title: $input.val(), content: $box.val(), rating: thumbCheck()}, function(data) {
         console.log(data);
       });
     } else {
