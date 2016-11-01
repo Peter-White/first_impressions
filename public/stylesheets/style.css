@@ -9,6 +9,7 @@ body {
   margin: 0 auto;
 }
 
+/*Review List*/
 .reviews {
   padding-top: 2%;
 }
@@ -29,12 +30,26 @@ body {
   padding: 1% 0 1% 0;
   margin: 0 auto;
 }
-.reviews ul {
+.bad {
   background-color: red;
   background: -webkit-linear-gradient(red, white); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(red, white); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(red, white); /* For Firefox 3.6 to 15 */
   background: linear-gradient(red, white); /* Standard syntax */
+}
+.good {
+  background-color: lightgreen;
+  background: -webkit-linear-gradient(lightgreen, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(lightgreen, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(lightgreen, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(lightgreen, white); /* Standard syntax */
+}
+.average {
+  background-color: yellow;
+  background: -webkit-linear-gradient(yellow, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(yellow, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(yellow, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(yellow, white); /* Standard syntax */
 }
 
 .logo h1 {
