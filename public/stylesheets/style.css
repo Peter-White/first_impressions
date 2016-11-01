@@ -130,4 +130,7 @@ footer {
   .postReview textarea {
     font-size: 14px;
   }
+  .toggle {
+    padding: 0 4%;
+  }
 }
