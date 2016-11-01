@@ -8,9 +8,14 @@ body {
   background-color: white;
   margin: 0 auto;
 }
+.postReview label {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Review Styling*/
 #thumb {
   float: left;
-  height: 70px;
+  height: 50px;
 }
 .reviews ul {
   border-radius: 10px;
@@ -20,13 +25,19 @@ body {
 }
 .reviews {
   padding-top: 2%;
+  font-family: 'Open Sans', sans-serif;
 }
 #review {
-  width: 75%;
   margin: 0 auto;
+  max-width: 80%;
 }
 #title {
   font-size: 30px;
+}
+  /*Review List*/
+#thumb {
+  position: relative;
+  padding: 2%;
 }
 
 /*Color Coder*/
@@ -76,9 +87,6 @@ footer {
   padding: 1%;
   background-color: rgb(255, 179, 217);
 }
-.title {
-  line-height: 20px;
-}
 .overLimit {
   color: red;
 }
@@ -116,10 +124,7 @@ footer {
   footer a {
     font-size: 30px;
   }
-  /*Review List*/
-  #thumb {
-    padding: 3.5%;
-  }
+
 }
 @media (min-width: 320px) and (max-width: 568px) {
   #thumb {
