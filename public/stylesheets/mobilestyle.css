@@ -1,14 +1,1 @@
-@media (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  .reviews {
-    width: 90%;
-  }
-  .postReview .form-control, textarea {
-    width: 80%;
-  }
-  footer a {
-    padding: 10%;
-  }
-  .container {
-    width: 90%;
-  }
-}
+
