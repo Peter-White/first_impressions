@@ -8,7 +8,7 @@ body {
   background-color: white;
   margin: 0 auto;
 }
-.postReview label {
+lable {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -37,7 +37,7 @@ body {
   /*Review List*/
 #thumb {
   position: relative;
-  padding: 2%;
+  padding: 2% 2.5%;
 }
 
 /*Color Coder*/
@@ -87,6 +87,8 @@ footer {
   padding: 1%;
   background-color: rgb(255, 179, 217);
 }
+
+/*Form Styling*/
 .overLimit {
   color: red;
 }
@@ -95,21 +97,23 @@ footer {
 }
 .form-control {
   font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
 }
 .toggle {
   cursor: pointer;
   height: 50px;
-  padding: 0 4%;
 }
 .postReview {
   padding: 1% 4%;
 }
 .postReview textarea {
   font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
 }
 #charCount {
   float: left;
 }
+
 @media (min-width: 568px) {
   .postReview .form-control, textarea {
     width: 100%;
@@ -124,15 +128,7 @@ footer {
   footer a {
     font-size: 30px;
   }
-
-}
-@media (min-width: 320px) and (max-width: 568px) {
-  #thumb {
-    height: 40px;
-    padding: 4%;
-  }
-  #title {
-    padding-bottom: 3.5%;
-    font-size: 20px;
+  .toggle {
+    padding: 0 4%;
   }
 }

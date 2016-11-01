@@ -1,1 +1,14 @@
+@media (min-width: 320px) and (max-width: 568px) {
+  #thumb {
+    height: 40px;
+    padding: 4%;
+  }
+  #title {
+    padding-bottom: 3.5%;
+    font-size: 20px;
+  }
+  .toggle {
+    padding: 4%;
+  }
+}
 
