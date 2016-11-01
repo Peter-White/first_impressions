@@ -8,18 +8,38 @@ body {
   background-color: white;
   margin: 0 auto;
 }
+
 .reviews {
   padding-top: 2%;
 }
+#thumb {
+  float: left;
+  padding: 3.5%;
+}
+#review {
+  width: 75%;
+  margin: 0 auto;
+}
+#title {
+  font-size: 30px;
+}
+.reviews ul {
+  border-radius: 10px;
+  width: 80%;
+  padding: 1% 0 1% 0;
+  margin: 0 auto;
+}
+.reviews ul {
+  background-color: red;
+  background: -webkit-linear-gradient(red, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(red, white); /* Standard syntax */
+}
+
 .logo h1 {
   font-family: 'Kaushan Script', cursive;
   color: rgb(255, 0, 102);
-}
-.reviews ul img {
-  padding: 1%;
-}
-#thumb {
-  float: left;
 }
 footer {
   background-color: rgb(255, 179, 217);

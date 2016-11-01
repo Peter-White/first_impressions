@@ -21,11 +21,8 @@ $(document).ready(function() {
       $status.removeClass('error');
       $status.addClass('success');
       $status.html("Success!");
-      $.ajax({
-        url: '/reviews',
-        type: 'POST',
-        dataType: 'json',
-        data: {title: $input.val(), content: $box.val(), rating: $input.last().val()},
+      $.post('/reviews', {title: $input.val(), content: $box.val(), rating: $input.last().val()}, function(data) {
+        console.log(data);
       });
     } else {
       $status.removeClass('success');
