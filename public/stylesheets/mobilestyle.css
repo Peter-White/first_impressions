@@ -10,8 +10,14 @@
   .toggle {
     padding: 4%;
   }
+  .form-control {
+    font-size: 12px;
+  }
   .postReview textarea {
     font-size: 10px;
+  }
+  .reviews {
+    min-height: 600px;
   }
 }
 

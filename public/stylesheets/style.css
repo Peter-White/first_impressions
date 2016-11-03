@@ -32,9 +32,7 @@ lable {
   margin: 0 auto;
   max-width: 80%;
 }
-#title {
-  font-size: 30px;
-}
+
   /*Review List*/
 #thumb {
   position: relative;
@@ -64,10 +62,6 @@ lable {
   background: linear-gradient(yellow, white); /* Standard syntax */
 }
 
-.logo h1 {
-  font-family: 'Kaushan Script', cursive;
-  color: rgb(255, 0, 102);
-}
 footer {
   background-color: rgb(255, 179, 217);
 }
@@ -80,13 +74,12 @@ footer {
   background-color: rgb(255, 51, 51);
 }
 
+/*Logo*/
 .logo img {
-  height: 60px;
-  float: left;
-}
-.logo {
-  padding: 1%;
+  height: 150px;
   background-color: rgb(255, 179, 217);
+  padding: 1%;
+  border-radius: 0 0 20px 0;
 }
 
 /*Form Styling*/
@@ -97,7 +90,6 @@ footer {
   width: 100%;
 }
 .form-control {
-  font-size: 16px;
   font-family: 'Open Sans', sans-serif;
 }
 .toggle {
@@ -107,9 +99,6 @@ footer {
 .postReview {
   padding: 1% 4%;
 }
-#charCount {
-  float: left;
-}
 .postReview textarea {
   font-family: 'Open Sans', sans-serif;
 }
@@ -118,20 +107,26 @@ footer {
   .postReview .form-control, textarea {
     width: 100%;
   }
-  .container {
-    width: 90%;
-  }
-  footer {
-    width: 100%;
-    padding: 2%;
-  }
-  footer a {
+  a {
     font-size: 30px;
+    float: right;
+  }
+  #title {
+    font-size: 30px;
+  }
+  .reviews {
+    min-height: 200px;
+  }
+  .form-control {
+    font-size: 10px;
   }
   .postReview textarea {
     font-size: 14px;
   }
   .toggle {
     padding: 0 4%;
+  }
+  .container {
+    min-height: 1000px;
   }
 }

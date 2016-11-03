@@ -4,6 +4,8 @@ block content
   script(src="/javascripts/postData.js")
   script(src="/javascripts/counter.js")
   script(src="/javascripts/submit.js")
+  .logo
+    img(src="./images/logo.png")
 
   br
   br
@@ -21,8 +23,9 @@ block content
             br
             textarea(type='text', name='content', rows='4', cols='50', placeholder="Enter review here")
             br
-            p#charCount 0
-            p#outof &nbsp; / 300
+            p
+              span#charCount 0
+              | &nbsp; / 300
           .form-group
             lable Rating:
             br
@@ -37,4 +40,3 @@ block content
           button.btn.btn-defualt(type='submit') Submit
           #status
   br
-  .reviewContainer
