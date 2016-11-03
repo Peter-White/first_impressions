@@ -19,8 +19,12 @@ $(document).ready(function() {
     format: "json"
   };
   function displayReviews(data) {
+    var reviewArray = [];
+    for(var i = data.length - 1; i >= 0; i--) {
+      reviewArray.push(data[i]);
+    }
     var reviewHTML = '<div class="reviews">';
-    $.each(data, function(i, review) {
+    $.each(reviewArray, function(i, review) {
       reviewHTML += '<ul type="none" id="' + review._id + '" class=' + qualityCheck(review.rating) + '>';
       reviewHTML += '<li><img src="' + review.rating + '" id="thumb"/></li>';
       reviewHTML += '<li><h2 id="title">' + review.title + '</h2></li>';
@@ -30,6 +34,8 @@ $(document).ready(function() {
     });
     reviewHTML += '</div>';
     $('.container').append(reviewHTML);
+    console.log(data.length);
+    console.log(data);
   };
   $.getJSON(reviewAPI, reviewOptions, displayReviews);
 });

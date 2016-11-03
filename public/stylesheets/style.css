@@ -78,8 +78,8 @@ footer {
 .logo img {
   height: 150px;
   background-color: rgb(255, 179, 217);
-  padding: 1%;
-  border-radius: 0 0 20px 0;
+  padding: 1% 2% 2% 1%;
+  border-radius: 0 20% 20% 20%;
 }
 
 /*Form Styling*/
