@@ -34,8 +34,8 @@ $(document).ready(function() {
     });
     reviewHTML += '</div>';
     $('.container').append(reviewHTML);
-    console.log(data.length);
-    console.log(data);
+    console.log(reviewArray.length);
+    console.log(reviewArray);
   };
   $.getJSON(reviewAPI, reviewOptions, displayReviews);
 });

@@ -7,6 +7,16 @@ html
     script(src="https://code.jquery.com/jquery-3.1.1.min.js")
     link(href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
+    script(type='text/javascript').
+      var postHTML =  function(i, review, reviewHTML) {
+        reviewHTML += '<ul type="none" id="' + review._id + '" class=' + qualityCheck(review.rating) + '>';
+        reviewHTML += '<li><img src="' + review.rating + '" id="thumb"/></li>';
+        reviewHTML += '<li><h2 id="title">' + review.title + '</h2></li>';
+        reviewHTML += '<li><p id="review">' + review.content + '</p></li>';
+        reviewHTML += '</ul>';
+        reviewHTML += '<br>';
+        return reviewHTML;
+      };
   body
     header
     .container

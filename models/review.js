@@ -4,8 +4,10 @@ var autopopulate = require('mongoose-autopopulate');
 var reviewSchema = new mongoose.Schema({
   title: String,
   content: String,
-  created_at: { type: Date },
   rating: String
+},
+{
+  timestamps: true
 });
 
 reviewSchema.pre('save', function(next){
