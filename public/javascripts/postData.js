@@ -1,19 +1,5 @@
 $(document).ready(function() {
 
-  var qualityCheck = function(photo) {
-    if(photo === './images/thumbsup.png') {
-      return "good"
-    } else if(photo === './images/thumbsdown.png') {
-      return "bad"
-    }
-    else if(photo === './images/thumbsside.png') {
-      return "average"
-    }
-    else {
-      return 'error'
-    }
-  };
-
   var reviewAPI = "/reviews";
   var reviewOptions = {
     format: "json"

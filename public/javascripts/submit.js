@@ -45,17 +45,18 @@ $(document).ready(function() {
           format: "json"
         })
         .done(function( data ) {
+          var reviewHTML = '<ul';
           $.each(data, function( i, review ) {
             if(review.title === $input.val() && review.content === $box.val() && thumbCheck()) {
-              var reviewHTML = '<ul type="none" id="' + review._id + '" class=' + qualityCheck(review.rating) + '>';
+              reviewHTML += ' type="none" id="' + review._id + '" class=' + qualityCheck(review.rating) + '>';
               reviewHTML += '<li><img src="' + review.rating + '" id="thumb"/></li>';
               reviewHTML += '<li><h2 id="title">' + review.title + '</h2></li>';
               reviewHTML += '<li><p id="review">' + review.content + '</p></li>';
               reviewHTML += '</ul>';
               reviewHTML += '<br>';
-              $('ul:first').insertBefore(reviewHTML);
             }
           });
+          $('ul:first').before(reviewHTML);
         });
       });
     } else {
