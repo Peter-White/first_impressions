@@ -7,6 +7,22 @@ $(document).ready(function() {
   var $status = $('#status');
   var $reviews = $('.reviews');
 
+  // Adds a class to ul objects
+  var qualityCheck = function(photo) {
+    if(photo === './images/thumbsup.png') {
+      return "good"
+    } else if(photo === './images/thumbsdown.png') {
+      return "bad"
+    }
+    else if(photo === './images/thumbsside.png') {
+      return "average"
+    }
+    else {
+      return 'error'
+    }
+  };
+
+  // Checks value of radio buttons
   var thumbCheck = function() {
     var $good = $("#good");
     var $bad = $("#bad");
@@ -26,6 +42,9 @@ $(document).ready(function() {
     }
   };
 
+  // Checks for duplicate reviews
+
+
   $postReview.hide();
 
   $toggle.click(function() {
@@ -40,25 +59,10 @@ $(document).ready(function() {
       $status.removeClass('error');
       $status.addClass('success');
       $status.html("Success!");
-      $.post('/reviews', {title: $input.val(), content: $box.val(), rating: thumbCheck()}, function() {
-        $.getJSON( "/reviews", {
-          format: "json"
-        })
-        .done(function( data ) {
-          var reviewHTML = '<ul';
-          $.each(data, function( i, review ) {
-            if(review.title === $input.val() && review.content === $box.val() && thumbCheck()) {
-              reviewHTML += ' type="none" id="' + review._id + '" class=' + qualityCheck(review.rating) + '>';
-              reviewHTML += '<li><img src="' + review.rating + '" id="thumb"/></li>';
-              reviewHTML += '<li><h2 id="title">' + review.title + '</h2></li>';
-              reviewHTML += '<li><p id="review">' + review.content + '</p></li>';
-              reviewHTML += '</ul>';
-              reviewHTML += '<br>';
-            }
-          });
-          $('ul:first').before(reviewHTML);
-        });
-      });
+      $.post('/reviews', {title: $input.val(), content: $box.val(), rating: thumbCheck()}, function(response,status) {
+        console.log(response);
+        console.log(status);
+      }, 'json');
     } else {
       $status.removeClass('success');
       $status.addClass('error');

@@ -8,7 +8,7 @@ body {
   background-color: white;
   margin: 0 auto;
 }
-lable {
+label {
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -31,6 +31,12 @@ lable {
 #review {
   margin: 0 auto;
   max-width: 80%;
+}
+#title {
+  word-wrap: break-word;
+}
+#review {
+  word-wrap: break-word;
 }
 
   /*Review List*/

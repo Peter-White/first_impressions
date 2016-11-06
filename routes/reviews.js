@@ -32,6 +32,7 @@ router.post('/', function(req, res) {
       res.sendStatus(204);
     }
     });
+    console.log(res);
 });
 
 router.patch('/:id', function(req, res) {

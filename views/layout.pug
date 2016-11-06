@@ -8,19 +8,9 @@ html
     link(href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet")
     script(type='text/javascript').
-        var qualityCheck = function(photo) {
-          if(photo === './images/thumbsup.png') {
-            return "good"
-          } else if(photo === './images/thumbsdown.png') {
-            return "bad"
-          }
-          else if(photo === './images/thumbsside.png') {
-            return "average"
-          }
-          else {
-            return 'error'
-          }
-        };
+      $.getJSON('/review', 'json', function(json, textStatus) {
+
+      });
   body
     header
     .container
