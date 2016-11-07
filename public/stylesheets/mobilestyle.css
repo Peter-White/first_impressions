@@ -1,7 +1,8 @@
 @media (min-width: 320px) and (max-width: 568px) {
   #thumb {
+    display:block;
     height: 40px;
-    padding: 4%;
+    margin: 0 auto;
   }
   #title {
     padding-bottom: 3.5%;

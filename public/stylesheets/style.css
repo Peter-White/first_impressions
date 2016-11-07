@@ -13,11 +13,7 @@ label {
   font-family: 'Open Sans', sans-serif;
 }
 
-/*Review Styling*/
-#thumb {
-  float: left;
-  height: 50px;
-}
+/*Review List*/
 .reviews ul {
   border-radius: 10px;
   width: 80%;
@@ -37,12 +33,6 @@ label {
 }
 #review {
   word-wrap: break-word;
-}
-
-  /*Review List*/
-#thumb {
-  position: relative;
-  padding: 2% 2.5%;
 }
 
 /*Color Coder*/
@@ -116,6 +106,11 @@ footer {
   a {
     font-size: 30px;
     float: right;
+  }
+  #thumb {
+  float: left;
+  height: 50px;
+  padding: 2% 2.5%;
   }
   #title {
     font-size: 30px;
