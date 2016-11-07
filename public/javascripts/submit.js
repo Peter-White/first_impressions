@@ -60,8 +60,8 @@ $(document).ready(function() {
       $status.addClass('success');
       $status.html("Success!");
       $.post('/reviews', {title: $input.val(), content: $box.val(), rating: thumbCheck()}, function(response,status) {
-        console.log(response);
-        console.log(status);
+        $input.val('');
+        $box.val('');
       }, 'json');
     } else {
       $status.removeClass('success');
