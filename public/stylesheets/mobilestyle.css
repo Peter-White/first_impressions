@@ -1,13 +1,28 @@
 @media (min-width: 320px) and (max-width: 568px) {
+
+/*Reviews Mobile Styling*/
   #thumb {
     display:block;
     height: 40px;
     margin: 0 auto;
   }
+  .reviews ul {
+    width: 90%;
+  }
+  #review, #title {
+    max-width: 95%;
+  }
   #title {
     padding-bottom: 3.5%;
     font-size: 20px;
   }
+  .reviews {
+    min-height: 600px;
+  }
+  #title, #review {
+    padding-left: 2%;
+  }
+
   .toggle {
     padding: 4%;
   }
@@ -16,9 +31,6 @@
   }
   .postReview textarea {
     font-size: 10px;
-  }
-  .reviews {
-    min-height: 600px;
   }
 }
 

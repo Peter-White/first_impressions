@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var $charCount = $('#charCount');
+  var $titleCount = $('#titleCount');
   var $toggle = $('.toggle');
   var $postReview = $('.postReview');
   var $input = $('.postReview input');
@@ -52,10 +53,11 @@ $(document).ready(function() {
   });
 
   $('.postReview form').submit(function(event) {
-    var check = $charCount.hasClass( 'overLimit' );
+    var reviewCheck = $charCount.hasClass( 'overLimit' );
+    var titleCheck = $titleCount.hasClass( 'overLimit' );
     event.preventDefault();
 
-    if(check === false && $input.val().length > 0 && $box.val().length > 0) {
+    if(reviewCheck === false && titleCheck === false && $input.val().length > 0 && $box.val().length > 0) {
       $status.removeClass('error');
       $status.addClass('success');
       $status.html("Success!");
@@ -67,8 +69,11 @@ $(document).ready(function() {
       $status.removeClass('success');
       $status.addClass('error');
       var errorHTML = "<ul>";
-      if (check !== false) {
-        errorHTML +=  "<li>Maximum Character Length Exceded</li>";
+      if (reviewCheck !== false) {
+        errorHTML +=  "<li>Maximum Character Length Of Review Exceded</li>";
+      }
+      if (titleCheck !== false) {
+        errorHTML +=  "<li>Maximum Character Length Of Title Exceded</li>";
       }
       if ($input.val().length === 0) {
         errorHTML += "<li>No Title Given</li>";

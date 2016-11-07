@@ -16,17 +16,12 @@ label {
 /*Review List*/
 .reviews ul {
   border-radius: 10px;
-  width: 80%;
   padding: 1% 0 1% 0;
   margin: 0 auto;
 }
 .reviews {
   padding-top: 2%;
   font-family: 'Open Sans', sans-serif;
-}
-#review {
-  margin: 0 auto;
-  max-width: 80%;
 }
 #title {
   word-wrap: break-word;
@@ -107,6 +102,11 @@ footer {
     font-size: 30px;
     float: right;
   }
+
+/*Full Reviews Styling*/
+  .reviews ul {
+    width: 80%;
+  }
   #thumb {
   float: left;
   height: 50px;
@@ -118,6 +118,12 @@ footer {
   .reviews {
     min-height: 200px;
   }
+  #review {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+/*Full Form Styling*/
   .form-control {
     font-size: 10px;
   }
