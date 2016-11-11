@@ -29,6 +29,9 @@ label {
 #review {
   word-wrap: break-word;
 }
+.toggle {
+  background-color: lightgreen;
+}
 
 /*Color Coder*/
 .bad {
@@ -65,15 +68,13 @@ footer {
   background-color: rgb(255, 51, 51);
 }
 
-/*Logo*/
-.logo img {
-  height: 150px;
-  background-color: rgb(255, 179, 217);
-  padding: 1% 2% 2% 1%;
-  border-radius: 0 20% 20% 20%;
-}
-
 /*Form Styling*/
+form {
+  background-color: lightgreen;
+  border-width: 10px;
+  border-style: solid;
+  border-color: red;
+}
 .overLimit {
   color: red;
 }
@@ -95,12 +96,24 @@ footer {
 }
 
 @media (min-width: 568px) {
-  .postReview .form-control, textarea {
-    width: 100%;
+  .postReview {
+    width: 92%;
+  }
+  .form-control, textarea {
+    width: 98%;
   }
   a {
     font-size: 30px;
     float: right;
+  }
+  header {
+    background-color: rgb(255, 179, 217);
+  }
+
+/*Logo*/
+  .logo img {
+    height: 100px;
+    padding: 0 1% 1% 1%;
   }
 
 /*Full Reviews Styling*/
@@ -108,12 +121,13 @@ footer {
     width: 80%;
   }
   #thumb {
-  float: left;
-  height: 50px;
-  padding: 2% 2.5%;
+    float: left;
+    height: 50px;
+    padding: 2% 2.5%;
   }
   #title {
     font-size: 30px;
+    max-width: 95%;
   }
   .reviews {
     min-height: 200px;
@@ -131,7 +145,8 @@ footer {
     font-size: 14px;
   }
   .toggle {
-    padding: 0 4%;
+    display:block;
+    margin-left: 4%;
   }
   .container {
     min-height: 1000px;

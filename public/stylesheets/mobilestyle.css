@@ -19,10 +19,18 @@
   .reviews {
     min-height: 600px;
   }
+  header {
+    background-color: rgb(255, 255, 255);
+  }
   #title, #review {
     padding-left: 2%;
   }
-
+  .logo img {
+    display:block;
+    height: 100px;
+    padding: 1% 2% 2% 1%;
+    margin: 0 auto;
+  }
   .toggle {
     padding: 4%;
   }

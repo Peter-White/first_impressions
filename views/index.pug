@@ -4,8 +4,6 @@ block content
   script(src="/javascripts/postData.js")
   script(src="/javascripts/counter.js")
   script(src="/javascripts/submit.js")
-  .logo
-    img(src="./images/logo.png" alt="Website logo")
 
   br
   br
@@ -16,7 +14,7 @@ block content
           .form-group
             label * Title:
             br
-            input.form-control(type='text', name="title", placeholder='Title')
+            input.form-control(type='text', name="title", placeholder='Title', autocomplete="off")
           .form-group
             br
             p
